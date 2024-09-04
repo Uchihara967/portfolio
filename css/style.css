@@ -179,6 +179,7 @@ footer small {
   color: #c7c3ba;
   font-size: .875rem;
 }
-.url p {
+.url {
   color: #fff;
+  margin-top: 10px;
 }
