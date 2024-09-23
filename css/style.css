@@ -1,185 +1,250 @@
 @charset "utf-8";
-/*
-BASIC STYLE
--------------------------------------------------------- */
 html {
-  font-size: 100%;
+  font-family: "Noto Sans JP", sans-serif;
 }
-body {
-  font-family: sans-serif;
-  background-color: #fbfaf7;
-  color: #43474c;
+.font_Rampart {
+  font-family: "Nanum Pen Script", cursive;
+
+}
+.font_rampart {
+  font-family: "Rampart One", sans-serif;
 }
 
-/*
-COMMON
--------------------------------------------------------- */
-p {
-  line-height: 1.8;
-}
 .container {
+  width: 90%;
+  max-width: 1240px;
   margin: 0 auto;
-  border-radius: 10px;
-}
-
-/*
-HEADER
--------------------------------------------------------- */
-header {
-  margin: 2.5rem auto 0;
-  background: url(../img/sea.jpg) no-repeat right center/cover;
-  height: 460px;
-}
-.wrap {
-  height: 360px;
   position: relative;
 }
-.headerTitle {
-  font-size: 5rem;
-  font-family: 'Amatic sc', cursive;
-  text-align: center;
-  line-height: 360px;
-  color: #ccd3e7;
+.flex {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
 }
-.naviGation {
-  position: fixed;
+
+/* ヘッダー */
+header {
+  padding: 30px 0;
+  margin-bottom: 40px;
+  border-bottom: solid 1px #5bbee5;
+}
+
+.container p {
+  display: flex;
+  flex-flow: column;
+  text-align: center;
+  font-size: 14px;
+}
+
+.container p span {
+  font-size: 26px;
+  color: #5bbee5;
+}
+
+.nav_menu li {
+  font-size: 18px;
+  margin-left: 30px;
+  transition: .2s;
+}
+
+.nav_menu li:hover {
+  color: #5bbee5;
+  border-bottom: solid 1px #000;
+  transition: .2s;
+}
+
+/* メイン */
+#hero {
+  background-image: url(../img/home_img.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 540px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 100px;
+  overflow: hidden;
+}
+
+#hero::before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  position: absolute;
   top: 0;
   left: 0;
+  opacity: 0.2;
+  z-index: 1;
+}
+
+.hero_bg {
+  background-color: #462323;
+  width: 30px;
+  height: 40px;
+}
+
+.hero_inner {
+  background-color: rgba(10, 10, 10, 0.3);
+  color: #ddd;
+  text-align: center;
+  z-index: 2;
+  line-height: 1.5;
+  padding: 20px 30px;
+}
+
+.hero_inner h1 {
+  font-size: 60px;
+}
+
+.hero_inner p {
+  font-size: 24px;
+}
+
+/* TEAM */
+.teme {
+  margin-bottom: 100px;
+}
+
+.font_rampart {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.font_rampart::before, .font_rampart::after {
+  border-top: solid 1px #5bbee5;
+  content: '';
+  width: 3em;
+}
+
+.font_rampart::before {
+  margin-right: 12px;
+}
+
+.font_rampart::after {
+  margin-left: 12px;
+}
+
+.img_list {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.img_list img {
+  background-position: center;
+  background-size: cover;
   width: 100%;
-  z-index: 100;
 }
-.navList {
+
+.img_list li::before {
+  white-space: pre;
+  content: 'Webエンジニア\A募集中';
+  line-height: 1.4;
+  width: 24.2%;
+  height: 20%;
+  position: absolute;
+  background-color: rgba(10, 10, 10, 0.3);
+  color: #ddd;
+  bottom: 0;
   display: flex;
   justify-content: center;
-  gap: 7rem;
-  font-weight: 600;
+  align-items: center;
+  text-align: center;
+  padding: 30px 0;
+}
+
+/* TOPICS */
+.topics_bg {
+  background-color: #f5fafa;
+}
+.topics {
+  width: 70%;
   margin: 0 auto;
-  padding: 10px 20px;
+  margin-bottom: 100px;
 }
 
-/*
-MAIN
--------------------------------------------------------- */
-main {
-  margin-bottom: 3rem;
-}
-#skill {
-  background-color: #fff;
-}
-.Sec {
-  padding-top: 40px;
+.icon img {
+  height: 120px;
 }
 
-/*
-プロフィール内　タイトル
--------------------------------------------------------- */
-.title h2 {
-  text-align: center;
-  font-size: 2rem;
-  font-family: 'M PLUS Rounded 1c', sans-serif;
-  font-weight: 600;
-  padding: 10px 0;
-}
-.title a:hover {
-  color: #605c55;
-}
-
-/*
-profileWrap
--------------------------------------------------------- */
-.profileWrap {
+.topics_a {
   display: flex;
   justify-content: center;
-  gap: 30px;
+  gap: 40px;
+  padding-bottom: 20px;
+  margin-bottom: 40px;
+  border-bottom: solid 1px #ddd;
 }
 
-/*
-プロフィール内　顔画像
--------------------------------------------------------- */
-.profileImg {
-  width: 180px;
-  height: 180px;
-  object-fit: cover;
-  border-radius: 50%;
+.topics_a:last-child {
+  border-bottom: none;
 }
 
-/*
-プロフィール内　記事
--------------------------------------------------------- */
-.profileText {
-  width: 600px;
+.topics_date {
+  font-size: 12px;
+  color: gray;
+  margin-bottom: 5px;
 }
 
-/*
-SKILLブロック
--------------------------------------------------------- */
-/* テーブル */
-.table {
-  width: 460px;
-  height: 300px;
-  margin: auto;
-  background-color: #fff;
-}
-tr {
-  font-size: 1.2rem;
-}
-th {
-  vertical-align: middle;
-  text-align: center;
-  padding: 1.2rem 0;
-}
-td {
-  vertical-align: middle;
-  text-align: center;
+.wrapper h3 {
+  margin-bottom: 10px;
 }
 
-/* スキル画像 */
-.skillImg {
-  display: flex;
-  justify-content: center;
-  gap: 4rem;
-}
-.skillText {
-  display: flex;
-  justify-content: center;
-  gap: 4rem;
-  text-align: center;
-}
-.skillText a {
-  border-bottom: 1px solid;
-  font-weight: 600;
-}
-.skillText a:hover {
-  color: #605c55;
+.wrapper h3 a {
+  color: #5bbee5;
+  font-size: 18px;
+  border-bottom: solid 1px #5bbee5;
 }
 
-/*
-FOOTER
--------------------------------------------------------- */
+.wrapper p {
+  text-align: left;
+}
+
+/* フッター */
 footer {
-  background-color: #949087;
-  text-align: center;
-  padding: 3rem;
+  width: 100%;
+  background-color: #5bbee5;
+  color: #fff;
+  padding: 30px 0;
 }
-footer ul {
+
+.footer_nav {
   display: flex;
   justify-content: center;
-  margin-bottom: 2rem;
+  gap: 10px;
+  font-size: 12px;
+  margin-bottom: 10px;
 }
-footer li {
-  margin: 0 12px;
+
+.bord {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-footer a {
-  color: #fff;
+
+.bord::before, .bord::after {
+  border-top: solid 1px #fff;
+  content: '';
+  width: 16px;
+  transform: rotate(90deg);
 }
-footer a:hover {
-  color: #c7c3ba;
+
+.bord::before {
+  margin-right: 10px;
 }
-footer small {
-  color: #c7c3ba;
-  font-size: .875rem;
+
+.bord::after {
+  margin-left: 10px;
 }
-.url {
-  color: #fff;
-  margin-top: 10px;
+
+.copy {
+  font-size: 12px;
+  text-align: center;
 }
