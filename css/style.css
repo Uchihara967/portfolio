@@ -18,8 +18,9 @@ p {
   line-height: 1.8;
 }
 .container {
+  width: 90%;
+  max-width: 1240x;
   margin: 0 auto;
-  border-radius: 10px;
 }
 
 /*
@@ -134,27 +135,20 @@ td {
 }
 
 /* スキル画像 */
-.skillImg {
+.works_inner {
   display: flex;
   justify-content: center;
-  gap: 4rem;
-}
-.skillText {
-  display: flex;
-  justify-content: center;
-  gap: 3rem;
+  gap: 20px;
+  align-items: center;
   text-align: center;
 }
-.skillText a {
-  border-bottom: 1px solid;
-  font-weight: 600;
+.works_inner a:hover {
+  border-bottom: solid 1px red;
 }
-.skillText a:hover {
-  color: #605c55;
+.mabottom {
+  margin-top: 10px;
 }
-.skillText_center {
-  margin-left: 10rem;
-}
+
 
 /*
 FOOTER
